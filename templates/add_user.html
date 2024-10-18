@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport", content="width=device-width, initial scale=1.0">
+    <title>Users List</title>
+</head>
+<body>
+    <h1>Add a new user</h1>
+
+    <form method="POST" action="{{ url_for('add_user') }}">
+        <label for="nom">Last name:</label>
+        <input type="text" id="nom", name="nom" required><br>
+
+        <label for="prenom">First name:</label>
+        <input type="text" id="prenom", name="prenom" required><br>
+
+        <button type="submit">Add user</button>
+    </form>
+
+    <a href="{{ url_for('index') }}">
+        <button>Home</button>
+    </a>
+    <a href="{{ url_for('users') }}">
+        <button>Users List</button>
+    </a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport", content="width=device-width, initial scale=1.0">
+    <title>Users List</title>
+</head>
+<body>
+    <h1>Users List</h1>
+
+    <h2>Do you want to see the users list or to add a new user?</h2>
+    <a href="{{ url_for('users') }}">
+        <button>Users List</button>
+    </a>
+    <a href="{{ url_for('add_user') }}">
+        <button>Add User</button>
+    </a>
+</body>
+</html>
