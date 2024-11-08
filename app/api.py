@@ -40,13 +40,13 @@ def add_user():
     Return: a message to inform that the new user has been added successfully
     '''
     new_user = {
-                'id': 4,
-                'nom': 'Denton',
-                'prenom': 'JC'
+                'id': [request.args.get('id', 0, type=int)],
+                'nom': [request.args.get('nom', "", type=str)],
+                'prenom': [request.args.get('prenom', "", type=str)]
                 }
 
     users.append(new_user)
 
     return jsonify({'message': 'User added successfully!', 'user': new_user})
 
-app.run()
+app.run(host='0.0.0.0', port=5000)

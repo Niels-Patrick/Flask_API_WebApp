@@ -56,4 +56,4 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
-app.run()
+app.run(host='0.0.0.0', port=5000)
