@@ -13,7 +13,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Expose the port the app will listen on
-EXPOSE 8000
+EXPOSE 5000
 
 # Define the command to run the app
 CMD ["python", "api.py", "--host='0.0.0.0'", "--port=5000"]
