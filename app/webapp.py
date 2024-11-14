@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-from . import DAL
+import DAL
 
 app = Flask(__name__) # Creating flask object
 app.config['DEBUG'] = True # Launching the debugger
